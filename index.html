@@ -1,5 +1,7 @@
 ---
-hehe: 哈哈 
+hehe: 哈哈
+title: 这是标题这是标题
+zhaiyao: 这是摘要这是摘要这是摘要这是摘要 这是摘要这是摘要  
 ---
 
 
@@ -10,6 +12,13 @@ hehe: 哈哈
 	<title>Document</title>
 </head>
 <body>
-	<h1>hello world{{page.hehe}}</h1>
+	<h1>name:{{page.name}}</h1>
+	<h1>hello world{{page.hehe}}!</h1>
+	<h1>{{page.title | truncate:5}}</h1> 
+	<!-- 截取指定长度的字符串，第2个参数追加到字符串的尾部 -->
+	<h1>{{page.zhaiyao | truncate:6,'***'}}</h1>
+	<h1>{{'<a href="">123</a>' | strip_html}}</h1>
+	<h1>{{site.age}}</h1>
+	<h1>{{site.time | date:'%Y-%m-%d %H:%M:%S'}}</h1>
 </body>
 </html>
